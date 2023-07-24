@@ -1,5 +1,4 @@
-from flask import Flask;
-from flask import render_template,request
+from flask import Flask,render_template,request
 import numpy as np
 import joblib
 
@@ -16,7 +15,7 @@ def predict():
     testdata=np.array([data])
 
     print(testdata)
-    model=joblib.load('fetalmodel.pkl')
+    model=joblib.load('Maternalmodeal.pk1')
     res=model.predict(testdata)
 
     return render_template('index.html',p=res[0])
