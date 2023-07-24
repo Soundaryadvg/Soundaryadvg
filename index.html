@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myproject</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+<style>
+    body{
+        background-image: url(/static/WhatsApp\ Image\ 2023-06-28\ at\ 6.20.43\ PM\ \(2\).jpeg);
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid bg-primary text-white">
+        <marquee behavior=""direction="">
+            <h1> fetal health prediction</h1>
+        </marquee>
+
+    </div>
+
+        <div class= " bg-info" style="margin-left:auto;
+        margin-right:auto;width:400px;padding:10px; opacity:0.8">
+    
+        <h2>Enter patient details</h2>
+
+        <form action="/predict" method="post">
+         <table class="table">
+
+                <tr>
+                    <td>baselinevalue</td>
+                    <td>
+                        <input type="text" name="baselinevalue" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>accelerations</td>
+                    <td>
+                        <input type="text" name="accelerations" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td> fetal_movement</td>
+                    <td>
+                        <input type="text" name="fetal_movement" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>uterine_contractions</td>
+                    <td>
+                        <input type="text" name="uterine_contractions" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>prolongued_decelerations</td>
+                    <td>
+                        <input type="text" name="prolongued_decelerations" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>abnormal_short_term_variability</td>
+                    <td>
+                        <input type="text" name="abnormal_short_term_variability" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>percentage_of_time_with_abnormal_long_term_variability</td>
+                    <td>
+                        <input type="text" name="percentage_of_time_with_abnormal_long_term_variability" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>histogram_mode</td>
+                    <td>
+                        <input type="text" name="histogram_mode" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>histogram_mean</td>
+                    <td>
+                        <input type="text" name="histogram_mean" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>histogram_median</td>
+                    <td>
+                        <input type="text" name="histogram_median" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>histogram_variance</td>
+                    <td>
+                        <input type="text" name="histogram_variance" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset" class="btn btn-danger">
+                    </td>
+                    <td>
+                        <input type="submit" class="btn btn-primary">
+                    </td>
+                </tr> 
+    </table>
+</from>
+
+{% if p%}
+</h1>{{ p }}</h1>
+{% endif %}
+</div>
+</body>
+</html>
